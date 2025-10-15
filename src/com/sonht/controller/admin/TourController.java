@@ -144,7 +144,7 @@ public class TourController extends BaseController {
 		String address = request.getParameter("addressUp"+ id);
 		String content = request.getParameter("editorUp" + id);
 		String photoName = request.getParameter("filename" + id);
-		System.out.println(photoName);
+		//System.out.println(photoName);
 		
 		Tour tour = null;
 		// validate input form

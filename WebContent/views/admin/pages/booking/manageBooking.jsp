@@ -29,7 +29,7 @@
 	                                <th>Customer name</th>
 	                                <th>Total (USD)</th>
 	                                <th>Booking date</th>
-	                                <th>Action</th>
+	                                <!--  <th>Action</th> -->
 	                            </tr>
                             </thead>
                             <tbody>
@@ -41,12 +41,13 @@
                                     <td>${booking.customerName}</td>
                                     <td>${booking.price}</td>
                                     <td>${booking.createdDate}</td>
-                                    <td>
+                                    <%--  <td>
 	                                    <button type="button" class="btn btn-primary update-btn" data-bs-toggle="modal"
 	                                        data-bs-target="#modalApprove" >Approve</button>
                                         <button type="button" class="btn btn-danger " data-bs-toggle="modal"
 	                                        data-bs-target="#modalCancel" >Cancel</button>
                                     </td>
+                                    --%>
                                 </tr>
 	                           
                          	</c:forEach>

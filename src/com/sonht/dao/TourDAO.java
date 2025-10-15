@@ -23,7 +23,7 @@ public class TourDAO {
 		List<Tour> list = new ArrayList<Tour>();
 		try {
 			connection = new DatabaseContext().getConnection();
-			String sql = "select * from tour where status='active' ";
+			String sql = "select * from tour where status='active' and duetime > NOW() ";
 			statement = connection.createStatement();
 			rs = statement.executeQuery(sql);
 			while (rs.next()) {
@@ -189,10 +189,11 @@ public class TourDAO {
 		Statement statement = null;
 		ResultSet rs = null;
 		List<Tour> tours = new ArrayList<Tour>();
+		System.out.println(date);
 		try {
 			connection = new DatabaseContext().getConnection();
-			String sql = "SELECT * FROM web_booking_travel.tour WHERE status='active'"
-					+ " and STR_TO_DATE(start_date, '%Y-%m-%d') >= '"+date+"'; ";
+			String sql = "SELECT * FROM tour WHERE status='active'"
+					+ " and STR_TO_DATE(start_date, '%Y-%m-%d') = '"+date+"'; ";
 			statement = connection.createStatement();
 			rs = statement.executeQuery(sql);
 			while (rs.next()) {

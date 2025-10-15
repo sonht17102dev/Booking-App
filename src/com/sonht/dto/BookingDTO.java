@@ -29,7 +29,7 @@ public class BookingDTO {
 	}
 
 	public String getCreated_date() {
-		return created_date;
+		return this.created_date.substring(0, 10);
 	}
 
 	public double getPrice() {

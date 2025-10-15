@@ -76,7 +76,7 @@
                                     <td style="width:200px"><img style="width:100%;" src="${pageContext.servletContext.contextPath}/resources/images/${tour.image}"></td>
                                     <!-- <td><a href="detail">Xem chi tiết</a></td> -->
                                     <td>
-                                    <a href="" data-bs-toggle="modal" data-bs-target="#modalDetail"
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#modalDetail${tour.id}"
                                     	onclick="handlerDetailButton(${tour.id})">View more</a>
                                     </td>
                                     <td>${tour.formatTourDate()}</td>
@@ -107,7 +107,7 @@
 			                                    aria-label="Close"></button>
 			                          </div>
 			                          <div class="modal-body">
-			                          	<section id="content-detail"></section>
+			                          	<section id="content-detail${tour.id}"></section>
 			                          	
 			                          	<button type="button" class="btn btn-secondary"
 			                                        data-bs-dismiss="modal">

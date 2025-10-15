@@ -73,6 +73,24 @@ public class SignUpController extends BaseController {
 			}
 		}
 	}
+	public boolean isValidPassword(String password) {
+//        if (password == null || password.isEmpty()) {
+//            return false;
+//        }
+
+        // Biểu thức regex kiểm tra 4 tiêu chí
+		//		Có chữ in hoa (A-Z)
+		//
+		//		Có chữ thường (a-z)
+		//
+		//		Có ký tự đặc biệt (!@#$%^&*...)
+		//
+		//		Có số (0-9)
+        String regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&._#^-]).+$";
+
+        return password.matches(regex);
+    }
+	
 	private List<String> validateSignUp(String email, String fullname, String username, String pass, String repass) {
 		List<String> messagesError = new ArrayList<String>();
 		
@@ -88,6 +106,11 @@ public class SignUpController extends BaseController {
 	    if (!isValidInput(pass)) {
 	        messagesError.add("Please type your password");
 	    }
+	    
+	    if (!isValidPassword(pass)) {
+	    	messagesError.add("Please type password contains uppercase and lowercase letters, special characters, and numbers");
+	    }
+	    
 	    if (!isValidInput(repass)) {
 	        messagesError.add("Please type your Re-Password");
 	    }

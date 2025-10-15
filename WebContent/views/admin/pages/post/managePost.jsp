@@ -71,7 +71,7 @@
                                     <td style="width:200px"><img style="width:100%;" 
                                     src="${pageContext.servletContext.contextPath}/resources/images/${post.image}"></td>
                                     <td>
-                                    <a href="" data-bs-toggle="modal" data-bs-target="#modalDetail"
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#modalDetail${post.id}"
                                     	onclick="handlerDetailButton(${post.id})">View more</a>
                                     </td>
                                     <td>
@@ -79,7 +79,7 @@
 	                                        data-bs-target="#modalUpdate${post.id}" >
 	                                        Update</button>
                                         <button type="button" class="btn btn-danger " data-bs-toggle="modal"
-	                                        data-bs-target="#modalDelete" onclick="handlerDeleteButton(${post.id})">Delete</button>
+	                                        data-bs-target="#modalDelete${post.id}" onclick="handlerDeleteButton(${post.id})">Delete</button>
                                     </td>
                                 </tr>
 	                           <!-- Modal update start -->
@@ -87,7 +87,7 @@
 	                            <!-- Modal update end --> 
 	                            
 								<!-- Modal Detail start-->
-                            	<div class="modal fade" tabindex="-1" id="modalDetail"
+                            	<div class="modal fade" tabindex="-1" id="modalDetail${post.id}"
 			                         aria-labelledby="exampleModalLabel" aria-hidden="true">
 			                      <div class="modal-dialog modal-dialog-scrollable modal-xl">
 			                        <div class="modal-content">
@@ -97,7 +97,7 @@
 			                                    aria-label="Close"></button>
 			                          </div>
 			                          <div class="modal-body">
-			                          	<section id="content-detail"></section>
+			                          	<section id="content-detail${post.id}"></section>
 			                          	
 			                          	<button type="button" class="btn btn-secondary"
 			                                        data-bs-dismiss="modal">
@@ -110,7 +110,7 @@
 			                    </div>
                             	<!-- Modal Detail end-->
                             	<!-- Modal Delete start-->
-                            	<div class="modal fade" tabindex="-1" id="modalDelete"
+                            	<div class="modal fade" tabindex="-1" id="modalDelete${post.id}"
 			                         aria-labelledby="exampleModalLabel" aria-hidden="true">
 			                      <div class="modal-dialog">
 			                        <div class="modal-content">
@@ -120,7 +120,7 @@
 			                                    aria-label="Close"></button>
 			                          </div>
 			                          <div class="modal-body">
-			                          	<p id="content-delete"></p>
+			                          	<p id="content-delete${post.id}">${post.name}</p>
 			                            <form  method="post" 
 			                            	action="${pageContext.servletContext.contextPath}/admin/post">
 			                              <input type="hidden" class="form-control" name="postId" id="postIdDelete" value="${post.id}">
@@ -161,22 +161,22 @@
 
 	function handlerDetailButton(id) {
 		event.preventDefault();
-		fetch("/PRJ321x_Project1_BookingTravel/admin/post?commandPost=LOAD&postId=" + parseInt(id))
+		fetch("${pageContext.servletContext.contextPath}/admin/post?commandPost=LOAD&postId=" + parseInt(id))
 	    .then(response => response.json())
 	    .then(data => {
 			// Display data get from BE to form open
-	    	document.getElementById("content-detail").innerHTML = data.description;
+	    	document.getElementById("content-detail"+id).innerHTML = data.description;
 	    });
 	}
 	
 	function handlerDeleteButton(id) {
-		fetch("/PRJ321x_Project1_BookingTravel/admin/post?commandPost=LOAD&postId=" + parseInt(id))
+		fetch("${pageContext.servletContext.contextPath}/admin/post?commandPost=LOAD&postId=" + parseInt(id))
 	    .then(response => response.json())
 	    .then(data => {
 			//console.log(data)
 			// Display data get from BE to form open
 	    	document.getElementById("postIdDelete").value = data.id;
-	    	document.getElementById("content-delete").textContent = data.name + ' will be deleted by the system!';
+	    	document.getElementById("content-delete"+id).textContent = data.name + ' will be deleted by the system!';
 	    	
 	    });
 	}

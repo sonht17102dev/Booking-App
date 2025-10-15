@@ -2,6 +2,8 @@ package com.sonht.controller.client;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -43,8 +45,16 @@ public class BookingController extends BaseController {
 		HttpSession session = request.getSession();
 		List<String> errors = validateBooking(userId, tourId, quantityAdults, quantityChildren);
 		if(errors.isEmpty()) {
+			// Get the current date
+	        LocalDate currentDate = LocalDate.now();
+
+	        // Define the desired format
+	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+	        // Format the date
+	        String formattedDate = currentDate.format(formatter);
 			Booking booking = new Booking(Integer.parseInt(userId), Integer.parseInt(tourId), Integer.parseInt(quantityAdults),
-					Integer.parseInt(quantityChildren), "2024-07-31", "active");
+					Integer.parseInt(quantityChildren), formattedDate, "active");
 			try {
 				getBookingDAO().addNewBooking(booking);
 			} catch (SQLException e) {

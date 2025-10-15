@@ -141,7 +141,7 @@
     		<div class="row">
     		
     		<c:forEach var="tour" items="${list_tours}">
-    			<div class="col-sm col-md-6 col-lg-4 ftco-animate">
+    			<div class="col-sm col-md-6 col-lg-3 ftco-animate">
     				<div class="destination">
     					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" 
     					style='background-image: url("<c:url value="/resources/images/${tour.image}" />") '>
@@ -167,7 +167,7 @@
     							</div>
     						</div>
     						<%-- <p>${tour.description}</p> --%>
-    						<p class="days"><span>from ${tour.startDate} to ${tour.duetime}</span></p>
+    						<p class="days"><span>from ${tour.formatTourDate()} to ${tour.formatDueTime()}</span></p>
     						<hr>
     						<p class="bottom-area d-flex">
     							<span><i class="icon-map-o"></i> ${tour.address}</span> 

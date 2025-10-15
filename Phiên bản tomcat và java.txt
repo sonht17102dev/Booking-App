@@ -1,0 +1,2 @@
+Phiên bản server tomcat : 9
+Phiên bản java jdk : 17

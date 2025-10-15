@@ -20,7 +20,7 @@ public class Post {
 		return description;
 	}
 	public String getCreatedDate() {
-		return createdDate;
+		return this.createdDate.substring(0, 10);
 	}
 	public String getStatus() {
 		return status;

@@ -39,8 +39,9 @@ public class BookingAdminDTO {
 	}
 
 	public String getCreatedDate() {
-		return createdDate;
+		return this.createdDate.substring(0, 10);
 	}
+	
 
 	@Override
 	public String toString() {

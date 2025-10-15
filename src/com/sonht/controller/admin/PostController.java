@@ -100,18 +100,28 @@ public class PostController extends BaseController {
 	public void updatePost(HttpServletRequest request, HttpServletResponse response) 
 			throws IOException, ServletException, SQLException {
 		int id = Integer.parseInt(request.getParameter("postId"));
-		String postName = request.getParameter("postnameUp");
-		String created = request.getParameter("createdDateUp");
+		String postName = request.getParameter("postnameUp"+id);
+		String created = request.getParameter("createdDateUp"+id);
 		String content = request.getParameter("editorUp" + id);
-		
+		String photoName = request.getParameter("filename" + id);
 		Post post = new Post(id, postName, content, created, "active");
-		System.out.println(content);
+		//System.out.println(content);
 		List<String> messageErrors = validatePost(post);
 
 		Part filePart = request.getPart("fileUp"+ id);
 		String fileName = null;
 		if(filePart == null || filePart.getSize() == 0) {
-			messageErrors.add("Please select a file to upload.");
+//			messageErrors.add("Please select a file to upload.");
+			if (messageErrors.size() != 0) {
+				request.setAttribute("messagesError", messageErrors); // send message fail to jsp
+				listPosts(request, response); // return customer page
+			} else {
+				post.setImage(photoName);
+				// send message to tour page
+				request.setAttribute("messagesSuccess", "UPDATE");
+				getPostDAO().updatePost(post); // update post to db
+				listPosts(request, response);
+			}
 		} else {
 			fileName = getFileName(filePart);
 			try (InputStream fileContent = filePart.getInputStream();) {

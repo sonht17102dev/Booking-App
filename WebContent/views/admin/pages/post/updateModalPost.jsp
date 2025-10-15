@@ -20,11 +20,11 @@
 				<div class="row">
 					<div class="col-6">
 						<label for="postnameUp" class="col-form-label">post name:</label> 
-						<input type="text" class="form-control" id="postnameUp" name="postnameUp" value="${post.name}">
+						<input type="text" class="form-control" id="postnameUp" name="postnameUp${post.id}" value="${post.name}">
 					</div>
 					<div class="col-6">
 						<label for="createdDateUp" class="col-form-label">Start date:</label> 
-						<input type="date" class="form-control" id="createdDateUp" name="createdDateUp" value="${post.createdDate}" >
+						<input type="date" class="form-control" id="createdDateUp" name="createdDateUp${post.id}" value="${post.createdDate}" >
 					</div>
 				</div>
 				<div class="row">

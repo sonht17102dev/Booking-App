@@ -40,10 +40,11 @@ public class AuthenController extends BaseController {
 		}
 
 		try {
+			// get user from db with email input and status is active
 			User user = getUserDAO().checkEmailExist(email);
 			// if user email is not exist
 			if (user == null) {
-				request.setAttribute("message", "User mail is not exist! Try again!");
+				request.setAttribute("message", "User mail is not exist!<br>This email has been locked! <br>Try another email!");
 				request.setAttribute("action", "login");
 				request.getRequestDispatcher(authenPath).forward(request, response);
 			} else {
@@ -63,7 +64,7 @@ public class AuthenController extends BaseController {
 				} else {
 					session.setAttribute("userLogin", user);
 					session.setAttribute("message", "Login Success");
-					session.setMaxInactiveInterval(60*15);
+					session.setMaxInactiveInterval(60*15); // phiên session 15 phút
 					session.setAttribute("role", "user");
 					response.sendRedirect(request.getContextPath() + "/");
 				}

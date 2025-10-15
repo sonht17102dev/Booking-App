@@ -145,7 +145,7 @@ is an architectural work of art typical of Cham ethnic aesthetics. Then, transfe
  <p><strong>PRICE:</strong><br><strong>Starting at&nbsp;VND 15,999,000 / person</strong>&nbsp;(for a group of minimum 
  6&nbsp;people).<br><strong>VALIDITY: From January 1st, 2024 to December 31st, 2024</strong>&nbsp;(Except: Peak Season
  &amp; Festive periods)</p><p>Please contact us for more tailor-made&nbsp;tours: 
- <a href=\"mailto:Info@saigontouristvietnam.com\">Info@saigontouristvietnam.com</a></p>', NOW(), DATE_ADD(NOW(), INTERVAL 3 DAY), 'Nha Trang', 85, 'active'),
+ <a href=\"mailto:Info@saigontouristvietnam.com\">Info@saigontouristvietnam.com</a></p>', DATE_ADD(NOW(), INTERVAL 1 DAY), DATE_ADD(NOW(), INTERVAL 4 DAY), 'Nha Trang', 85, 'active'),
 ('Phu Quoc tour', 'PhuQuoc-bg.jpg', 
 '<p><strong>Day 1: Arrival - Phu Quoc</strong><br>Flight to Phu Quoc. Arrive in Phu Quoc. 
 Pick up and transfer to the hotel. Afternoon, visit Khu Tuong pepper garden, fish sauce firm, Sung Hung Co Tu Pagoda
@@ -156,7 +156,7 @@ Pick up and transfer to the hotel. Afternoon, visit Khu Tuong pepper garden, fis
  Free at leisure until transfer to the airport for the departure flight. End of service.</p><p><strong>Notes:</strong>
  B - Breakfast</p><p><strong>PRICE</strong>:<br><strong>Starting at</strong>&nbsp;<strong>VND</strong>&nbsp;<strong>9,500,000/ person </strong>
  (for a group of minimum 6&nbsp;people).</p><p><strong>Validity: From January 1st, 2024 to December 31st, 2024</strong></p>',
-NOW(), DATE_ADD(NOW(), INTERVAL 3 DAY), 'Phu Quoc', 275, 'active'),
+DATE_ADD(NOW(), INTERVAL 1 DAY), DATE_ADD(NOW(), INTERVAL 4 DAY), 'Phu Quoc', 275, 'active'),
 ('Da Lat tour', 'DaLat-XuanHuong.jpg', 
 '<p><strong>Day 1: Arrival - Da Lat</strong><br>Flight to Da Lat. Arrive at Lien Khuong airport. 
 Pick up and transfer to hotel. Afternoon, take a city tour to visit the Datanla waterfalls, 
@@ -184,7 +184,7 @@ NOW(), DATE_ADD(NOW(), INTERVAL 3 DAY), 'Da Lat City', 99, 'active'),
  10 minutes before prior to departure time.<br>Hotel pick-up.</p><p><strong>PRICE:&nbsp;VND 575,000/ person 
  for a group of minimum 4 people&nbsp;</strong><br><strong>
  Validity: From&nbsp;May 1st, 2024&nbsp;to September&nbsp;30th, 2024.</strong></p>',
-NOW(), DATE_ADD(NOW(), INTERVAL 3 DAY), 'Da Nang City', 349, 'active'),
+DATE_ADD(NOW(), INTERVAL 2 DAY), DATE_ADD(NOW(), INTERVAL 5 DAY), 'Da Nang City', 349, 'active'),
 ('Ha Noi - Sapa (4D3N)', 'Sapa-City.jpg',
 '<p><strong>Day 1: Ha Noi - Lao Cai (By Train)</strong><br>Pick up at the hotel and transfer to the railway station 
 for the night train to Lao Cai. Overnight on train.</p><p><strong>Day 2: Lao Cai - Sapa</strong><br>Arrive in Lao Cai
@@ -197,7 +197,7 @@ for the night train to Lao Cai. Overnight on train.</p><p><strong>Day 2: Lao Cai
  Noi. Pick up and transfer to the departure point. End of service.</p><p><strong>NOTE:</strong> B - Breakfast</p><p>
  <strong>PRICE</strong></p><p><strong>Starting at 7,500,000&nbsp;VND/person (for a group of minimum 6&nbsp;people).
  </strong></p><p><strong>Validity: From January 1st, 2024 to December 31st, 2024</strong></p>',
- NOW(), DATE_ADD(NOW(), INTERVAL 3 DAY), 'Sa Pa City', 349, 'active'),
+ DATE_ADD(NOW(), INTERVAL 3 DAY), DATE_ADD(NOW(), INTERVAL 4 DAY), 'Sa Pa City', 349, 'active'),
  ('Ha Noi - Sapa - Ninh Binh - Ha Long (6D5N)', 'Sapa.jpg',
 '<p><strong>Day 1: Arrival &nbsp;Ha Noi</strong><br>Arrive in Ha Noi. Meet and transfer to the hotel. Afternoon tour 
 to visit the the Literature Temple, Hoan Kiem Lake, Ngoc Son Temple and take 01-hour pedicab ride to the Old French 
@@ -220,7 +220,7 @@ to Ha Long Bay. Arrive in Ha Long City. Free at leisure. Overnight in Ha Long.&n
  PRICE:</strong><br><strong>Starting at</strong>&nbsp;<strong>VND 14,500,000/ person (for a group minimum 6 people)
  </strong></p><p><strong>Validity: From January 1st, 2024 to December 31st, 2024</strong><br>(Booking is applied for
  a private group from 2 adults onwards).</p>',
- NOW(), DATE_ADD(NOW(), INTERVAL 3 DAY), 'Ha Noi - Sapa - Ninh Binh - Ha Long', 709, 'active'),
+ DATE_ADD(NOW(), INTERVAL 2 DAY), DATE_ADD(NOW(), INTERVAL 4 DAY), 'Ha Noi - Sapa - Ninh Binh - Ha Long', 709, 'active'),
   ('HCM - Can Tho (2D1N)', 'CanTho-SongNuoc.jpg',
 '<p><strong>Day 1: Ho Chi Minh City - Can Tho - Mang Thit - Tra On (L, D)</strong><br>Morning: Pick up&nbsp;at your
  hotel in Saigon Center and transfer directly to Can Tho. Boarding at noon at Ninh Kieu pier. Welcome drink, 
@@ -239,7 +239,7 @@ to Ha Long Bay. Arrive in Ha Long City. Free at leisure. Overnight in Ha Long.&n
  Please note that the itinerary may be subject to change without prior notice.</i></p><p><strong>PRICE:&nbsp;
  </strong><br><strong>Starting at VND 8,880,000 / person</strong> (for a group of minimum 2 people)<br><strong>
  Validity: From January 1st, 2024 to December 31st, 2024&nbsp;</strong>(Except: Peak Season &amp; Festive periods)</p>',
- NOW(), DATE_ADD(NOW(), INTERVAL 3 DAY), 'Can Tho City', 379, 'active'),
+DATE_ADD(NOW(), INTERVAL 3 DAY), DATE_ADD(NOW(), INTERVAL 5 DAY), 'Can Tho City', 379, 'active'),
   ('VIET NAM MEDICAL TOUR: CITY - CU CHI TUNNEL - HO TRAM BEACH 5 Days 4 Nights', 'HoChiMinh.png',
 '<p><strong>Day 1: ARRIVAL - HO CHI MINH</strong><br>Afternoon: Saigontourist guide will welcome guest in Tan Son 
 Nhat international airport.<br>Transfer to hotel for check in (check in time: 14:00)<br>Overnight at the hotel in
@@ -283,7 +283,7 @@ Nhat international airport.<br>Transfer to hotel for check in (check in time: 14
  to the airport for departure flight. End of service.</p><p><strong>Notes:</strong>&nbsp;B - Breakfast</p><p><strong>
  *PRICE:</strong><br><strong>Starting at VND 8,999,000/ person</strong> (for a group of minimum 6&nbsp;people)</p><p>
  <strong>Validity: From January 1st, 2024 to December 31st, 2024</strong></p>',
- NOW(), DATE_ADD(NOW(), INTERVAL 3 DAY), 'Da Nang - Hoi An - My Son - Hue', 449, 'active'),
+DATE_ADD(NOW(), INTERVAL 1 DAY), DATE_ADD(NOW(), INTERVAL 4 DAY), 'Da Nang - Hoi An - My Son - Hue', 449, 'active'),
  ('A Perfect Mixture Of Nature And Culture', 'HoiAn.jpg',
 '<p><strong>Day 1: Arrival in DA NANG (/)</strong></p><p>Airport arrival / Pick up and transfer to Hotel / Free time 
 for leisure / Overnight in Da Nang.</p><p><strong>Day 2: DA NANG - BANA HILLS - DA NANG (Breakfast, Lunch)</strong>

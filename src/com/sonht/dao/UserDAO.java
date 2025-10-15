@@ -222,7 +222,7 @@ public class UserDAO {
 		ResultSet rs = null;
 		
 		try {
-			String query = "select * from user where email = ?";
+			String query = "select * from user where email = ? and status='active'";
 			connection = new DatabaseContext().getConnection();
 			preStatement = connection.prepareStatement(query);
 			preStatement.setString(1, userMail);
